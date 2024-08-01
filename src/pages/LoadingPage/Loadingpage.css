@@ -4,6 +4,9 @@
 
   justify-content: center;
   align-items: center;
+  background-image: url("/public/background.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .lds-roller,
@@ -31,7 +34,8 @@
   width: 7.2px;
   height: 7.2px;
   border-radius: 50%;
-  background: currentColor;
+  /* background: currentColor; */
+  background: red;
   margin: -3.6px 0 0 -3.6px;
 }
 

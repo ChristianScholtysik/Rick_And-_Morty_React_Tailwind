@@ -4,8 +4,8 @@ import "../../../public/background.jpg";
 const Home = () => {
   return (
     <>
-      <section className="home-wrapper">
-        <div className="Home bg-center bg-no-repeat bg-cover">
+      <section className="home-wrapper bg-center bg-no-repeat bg-cover bg-gradient-to-r from-cyan-500 to-blue-500">
+        <div className="Home ">
           <div className="hero  min-h-screen flex justify-start p-8">
             <div className="hero-content flex-col basis-1/4 flex-row-reverse glass rounded-lg">
               <div className="text-center lg:text-left">

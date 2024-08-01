@@ -1,0 +1,26 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url("../../public/background.jpg");
+  /* color: rgb(12 10 9); */
+}
+
+.text-cutout {
+  background: url("/public/background.jpg");
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding: 2rem;
+}
+
+.Home h1 {
+  color: #1e62b7;
+}

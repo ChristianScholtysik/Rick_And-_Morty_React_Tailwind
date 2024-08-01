@@ -1,0 +1,10 @@
+section {
+  color: rgb(12 10 9);
+}
+
+.output {
+  background-color: aqua;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+}

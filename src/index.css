@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.morty-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3vw;
+}
+
+.results-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 4rem 2rem;
+}
+.results {
+  background-image: url("/public/background.jpg");
+  background-size: cover;
+}

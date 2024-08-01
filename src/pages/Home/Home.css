@@ -3,8 +3,11 @@
   flex-direction: column;
   height: 100vh;
   background-image: url("../../public/background.jpg");
-
   /* color: rgb(12 10 9); */
+}
+
+.home-wrapper {
+  background-image: url("../../public/background.jpg");
 }
 
 .text-cutout {

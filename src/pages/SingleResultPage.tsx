@@ -40,19 +40,19 @@ const SingleResultPage = () => {
                     {singleResult?.gender}
                   </div>
                 </h2>
-                <p> Location: {singleResult?.location.name}</p>{" "}
-                <p>Origin: {singleResult?.origin.name} </p>
+                <p> Gender: {singleResult?.gender}</p>{" "}
+                <p>Species: {singleResult?.species} </p>
                 <p className="text-black">
                   {/* Base Experience: {singleResult?..base_experience} */}
                 </p>
                 <div className="card-actions justify-end">
                   <div className="badge badge-outline badge-primary badge-lg">
-                    hello
+                    {singleResult?.location.name}
                   </div>
                   <div
                     className="badge badge-outline badge-secondary badge-lg tooltip"
                     data-tip={singleResult?.episode}>
-                    Products
+                    {singleResult?.origin.name}
                   </div>
                 </div>
               </div>

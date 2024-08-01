@@ -34,7 +34,8 @@ const SingleResult: React.FC<ISingleResultProps> = (props) => {
             <h2 className="card-title">{props.item.name}</h2>
             <p>{props.item.gender}</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">{props.item.name}</button>
+              <button className="btn btn-accent">{props.item.species}</button>
+              <button className="btn btn-error">{props.item.status}</button>
             </div>
           </div>
         </div>

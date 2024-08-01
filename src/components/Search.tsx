@@ -6,13 +6,12 @@ import { IResult } from "../Interface/RickAndMortyResponse";
 import { MortyContext } from "../Context/Context";
 
 import { Link } from "react-router-dom";
-import AllResults from "./AllResults";
 
 const Search = () => {
   const [searchInput, setSearchInput] = useState<string>("");
   const [selectedStatus, setSelectedStatus] = useState<string>("");
   const [selectedGender, setSelectedGender] = useState<string>("");
-  const [characterData, setCharacterData] = useState<IResult[] | null>(null);
+  const [characterData, _setCharacterData] = useState<IResult[] | null>(null);
   const mortyContext = useContext(MortyContext);
 
   const FetchUrl = () => {

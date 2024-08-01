@@ -1,6 +1,7 @@
 import Search from "../../components/Search";
 import "./Home.css";
 import "../../../public/background.jpg";
+import "/public/background.jpg";
 const Home = () => {
   return (
     <>

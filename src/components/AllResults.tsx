@@ -1,10 +1,22 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import SingleResult from "./SingleResult";
-import { MortyContext } from "../Context/Context";
+import { MortyContext, PageContext } from "../Context/Context";
 
 const AllResults = () => {
   const mortyContext = useContext(MortyContext);
-  const [showResults, setShowResults] = useState(5);
+  const pageContext = useContext(PageContext);
+  const [showResults, setShowResults] = useState(20);
+
+  const fetchNewPageData = () => {
+    useEffect(() => {
+      fetch(
+        `https://rickandmortyapi.com/api/character/${pageContext?.page?.next}`
+      )
+        .then((res) => res.json())
+        .then((data) => mortyContext?.setCharacterData(data))
+        .catch((err) => console.error("Fehler Detail page", err));
+    }, []);
+  };
 
   if (mortyContext?.characterData === null) {
     return <h1>Loading...</h1>;
@@ -21,7 +33,7 @@ const AllResults = () => {
       <div className="justify-end">
         <button
           className="btn  btn-secondary btn-lg mt-2 "
-          onClick={() => setShowResults(showResults + 5)}>
+          onClick={fetchNewPageData()}>
           Show More Characters
         </button>
       </div>

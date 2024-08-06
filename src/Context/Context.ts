@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { IResult } from "../Interface/RickAndMortyResponse";
+import { IInfo, IResult } from "../Interface/RickAndMortyResponse";
 
 interface ILoading {
   loading: boolean;
@@ -14,3 +14,10 @@ interface IMortyContext {
 }
 
 export const MortyContext = createContext<IMortyContext | null>(null);
+
+interface IPageContext {
+  page: IInfo | null;
+  setPage: React.Dispatch<React.SetStateAction<IInfo | null>>;
+}
+
+export const PageContext = createContext<IPageContext | null>(null);
